@@ -4,9 +4,9 @@ import SpotifyWebApi from "spotify-web-api-node";
 
 const Buffer = require("buffer/").Buffer;
 const qs = require("qs");
-const spotifyApi = new SpotifyWebApi({
-  clientId: "0514ad96e00c46b5b02a076045cc4d8d",
-});
+// const spotifyApi = new SpotifyWebApi({
+//   clientId: "0514ad96e00c46b5b02a076045cc4d8d",
+// });
 
 const CLIENT_ID = "0514ad96e00c46b5b02a076045cc4d8d";
 const CLIENT_SECRET = "047e2723df374a669620329e6b047a86";
@@ -17,9 +17,6 @@ const authToken = new Buffer(CLIENT_ID + ":" + CLIENT_SECRET).toString(
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [songResults, setSongResults] = useState([]);
-
-  const accessToken =
-    "BQA40qb0UoycWpyJhcqQwM-SSXjVbgfWSP7igdflozJBmcIP_WKM0umabATOhy8ef_LypvQp2yLrmXnYKNs";
 
   const getAuth = async () => {
     try {
@@ -34,27 +31,32 @@ const SearchBar = () => {
         },
       });
       // return access token;
-
       return response.data.access_token;
     } catch (error) {
       console.log(error);
     }
   };
-  //call function that holds POST request
-  getAuth();
-
   useEffect(() => {
-    spotifyApi.setAccessToken(accessToken);
-  }, [accessToken]);
+    if (!searchTerm) {
+      return null;
+    }
+    const searchArtist = async () => {
+      const accessToken = await getAuth();
 
-  useEffect(() => {
-    if (!searchTerm) return null;
+      const response = await axios.get("https://api.spotify.com/v1/search", {
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+        params: {
+          q: searchTerm,
+          type: "track",
+        },
+      });
+      console.log(response.data);
+    };
+    searchArtist();
+  }, [searchTerm]);
 
-    spotifyApi.searchTracks(searchTerm).then((response) => {
-      setSongResults(response.body.tracks.items);
-      console.log(setSongResults);
-    });
-  }, [searchTerm, accessToken]);
   return (
     <div>
       <form className="ui form">
