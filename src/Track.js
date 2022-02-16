@@ -1,13 +1,16 @@
 import React from "react";
 
-const Track = ({ songs }) => {
-  console.log(songs);
+const Track = ({ song }) => {
+  console.log(song);
   return (
     <div className="ui relaxed divided list">
       <div className="item">
-        <img src={songs.image} alt="song image" />
+        <img src={song.image} alt="song image" />
         <div className="content">
-          <a href={songs.link}>{songs.name}</a>
+          <a href={song.link} className="header">
+            {song.title}
+          </a>
+          <div className="description">{song.artist}</div>
         </div>
       </div>
     </div>

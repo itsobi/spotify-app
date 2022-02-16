@@ -59,6 +59,7 @@ const SearchBar = () => {
             title: song.name,
             link: song.external_urls.spotify,
             id: song.id,
+            artist: song.artists[0].name,
           };
         })
       );
@@ -82,7 +83,7 @@ const SearchBar = () => {
         </div>
       </form>
       {songResults.map((song) => {
-        return <Track songs={songResults} key={song.id} />;
+        return <Track song={song} key={song.id} />;
       })}
     </div>
   );
