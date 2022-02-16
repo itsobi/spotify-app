@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import SpotifyWebApi from "spotify-web-api-node";
+import Track from "./Track";
 
 const Buffer = require("buffer/").Buffer;
 const qs = require("qs");
@@ -37,12 +37,8 @@ const SearchBar = () => {
     }
   };
   useEffect(() => {
-    if (!searchTerm) {
-      return null;
-    }
     const searchArtist = async () => {
       const accessToken = await getAuth();
-
       const response = await axios.get("https://api.spotify.com/v1/search", {
         headers: {
           Authorization: `Bearer ${accessToken}`,
@@ -52,8 +48,24 @@ const SearchBar = () => {
           type: "track",
         },
       });
-      console.log(response.data);
+      setSongResults(
+        response.data.tracks.items.map((song) => {
+          const smallestImage = song.album.images.reduce((smallest, image) => {
+            if (image.height < smallest.height) return image;
+            return smallest;
+          }, song.album.images[0]);
+          return {
+            image: smallestImage.url,
+            title: song.name,
+            link: song.external_urls.spotify,
+            id: song.id,
+          };
+        })
+      );
     };
+    if (!searchTerm) {
+      return null;
+    }
     searchArtist();
   }, [searchTerm]);
 
@@ -69,6 +81,9 @@ const SearchBar = () => {
           />
         </div>
       </form>
+      {songResults.map((song) => {
+        return <Track songs={songResults} key={song.id} />;
+      })}
     </div>
   );
 };
