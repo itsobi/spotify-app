@@ -75,6 +75,7 @@ const SearchBar = () => {
       <form className="ui form">
         <div className="field">
           <input
+            className="ui input"
             type="text"
             placeholder="search for song/favorite artist..."
             value={searchTerm}
@@ -82,9 +83,14 @@ const SearchBar = () => {
           />
         </div>
       </form>
-      {songResults.map((song) => {
-        return <Track song={song} key={song.id} />;
-      })}
+      <div
+        className="ui cards"
+        style={{ marginTop: "10px", justifyContent: "center" }}
+      >
+        {songResults.map((song) => {
+          return <Track song={song} key={song.id} />;
+        })}
+      </div>
     </div>
   );
 };
