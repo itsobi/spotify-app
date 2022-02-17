@@ -4,12 +4,10 @@ import Track from "./Track";
 
 const Buffer = require("buffer/").Buffer;
 const qs = require("qs");
-// const spotifyApi = new SpotifyWebApi({
-//   clientId: "0514ad96e00c46b5b02a076045cc4d8d",
-// });
 
-const CLIENT_ID = "0514ad96e00c46b5b02a076045cc4d8d";
-const CLIENT_SECRET = "047e2723df374a669620329e6b047a86";
+const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
+const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
+
 const authToken = new Buffer(CLIENT_ID + ":" + CLIENT_SECRET).toString(
   "base64"
 );
