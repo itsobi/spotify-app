@@ -12,6 +12,8 @@ ReactJS
 
 ## Quick Start
 
+Download zip file or clone the repository and open it up in your text editor.
+
 ### `npm start`
 
 Runs the app in the development mode.\
