@@ -8,7 +8,7 @@ In the searchbar, enter any artist/song you have in mind. The app will render a 
 
 ## Technologies Used
 
-ReactJS
+ReactJS, Spotify API, Semantic-UI
 
 ## Quick Start
 
