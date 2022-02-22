@@ -12,7 +12,7 @@ ReactJS, Spotify API, Semantic-UI
 
 ## Quick Start
 
-- Download zip file or clone the repository on your local machine, and open it up in your text editor.
+- Download zip file or clone the repository on your local machine, and open it up in your code editor.
 
 - In the terminal, run `npm install` to install all libraries allowing you to make request to Spotify API.
 
