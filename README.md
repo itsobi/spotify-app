@@ -12,7 +12,11 @@ ReactJS, Spotify API, Semantic-UI
 
 ## Quick Start
 
-Download zip file or clone the repository, and open it up in your text editor.
+- Download zip file or clone the repository on your local machine, and open it up in your text editor.
+- Next, create a .env file in the root directory to store your Client ID and Client Secret from the Spotify API as shown below:
+`REACT_APP_CLIENT_ID = XXXXXXXXXXXXXXXXX
+REACT_APP_CLIENT_SECRET = XXXXXXXXXXXXXX
+` 
 
 ### `npm start`
 
