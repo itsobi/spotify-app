@@ -22,7 +22,7 @@ ReactJS, Spotify API, Semantic-UI
 
 - To refer to these variables anywhere in the project: `process.env.REACT_APP_CLIENT_ID`, `process.env.REACT_APP_CLIENT_SECRET`
 
-- Next, in the terminal, run `npm install` to install all libraries, allowing you to make request to Spotify API.
+- Next, in the terminal, run `npm install` to install all libraries allowing you to make request to Spotify API.
 
 ### `npm start`
 
