@@ -23,7 +23,7 @@ ReactJS, Spotify API, Semantic-UI
 
 `process.env.REACT_APP_CLIENT_ID = XXXXXXXXXXXXXXXXX`
 
-- Next, in the terminal, `npm install axios` to make HTTP request to the Spotify API.
+- Next, in the terminal, `npm install axios` to install the axios library, allowing you to make request to Spotify API.
 
 - Then, at the top of the component you wish to make the API request:
 
