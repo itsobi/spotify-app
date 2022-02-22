@@ -20,9 +20,7 @@ ReactJS, Spotify API, Semantic-UI
 `REACT_APP_CLIENT_ID = XXXXXXXXXXXXXXXXX`
 `REACT_APP_CLIENT_SECRET = XXXXXXXXXXXXXXXXX`
 
-- To refer to these variables anywhere in the project:
-
-`process.env.REACT_APP_CLIENT_ID = XXXXXXXXXXXXXXXXX`
+- To refer to these variables anywhere in the project: `process.env.REACT_APP_CLIENT_ID`
 
 - Next, in the terminal, `npm install axios` to install the axios library, allowing you to make request to Spotify API.
 
