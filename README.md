@@ -25,7 +25,7 @@ ReactJS, Spotify API, Semantic-UI
 
 - Next, in the terminal, `npm install axios` to make HTTP request to the Spotify API.
 
-- Then, import:
+- Then, at the top of the component you want to hold the API call in:
 
 `import axios from "axios"` and `import { useState, useEffect } from "react"`
 
