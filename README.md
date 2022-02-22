@@ -17,7 +17,7 @@ ReactJS, Spotify API, Semantic-UI
 - In the terminal, run `npm install` to install all libraries allowing you to make request to Spotify API.
 
 - Next, create a `.env` file in the root directory to store your Spotify Credentials as shown below:
-(variable name must have prefix of REACT_APP_)
+(name must have prefix of REACT_APP_)
 
 `REACT_APP_CLIENT_ID = XXXXXXXXXXXXXXXXX`
 `REACT_APP_CLIENT_SECRET = XXXXXXXXXXXXXXXXX`
