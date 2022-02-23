@@ -2,15 +2,15 @@
 
 Music app using Spotify API that allows user to search and play any song on Spotify.
 
-## Project Description
+### Project Description
 
 In the searchbar, enter any artist/song you have in mind. The app will render a list of 20 tracks on the screen. Once you click a card on screen, a new tab of the song on Spotify will open on your browser. From there you will be able to listen to the track on Spotify!
 
-## Technologies Used
+### Technologies Used
 
 ReactJS, Spotify API, Semantic-UI
 
-## Quick Start
+### Quick Start
 
 - Download zip file or clone the repository on your local machine, and open it up in your code editor.
 
