@@ -26,11 +26,9 @@ ReactJS, Spotify API, Semantic-UI
 
 - To refer to these variables anywhere in the project: `process.env.REACT_APP_CLIENT_ID`, `process.env.REACT_APP_CLIENT_SECRET`
 
-### `npm start`
+### How to view the app in the browser
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- In the terminal run `npm start`. This will run the app in development mode, on port [http://localhost:3000](http://localhost:3000).
 
-The page will reload when you make changes.\
+- The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
